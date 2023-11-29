@@ -1,5 +1,6 @@
 # Tasks Manager
-![imagen](imagen)
+![](./github-images/banner-1.jpg)
+![](./github-images/banner-2.jpg)
 
 #### Technologies
 #
