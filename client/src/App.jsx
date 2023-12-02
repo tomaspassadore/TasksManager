@@ -11,13 +11,7 @@ import FloatButton from './components/FloatButton.jsx'
 import Footer from './components/Footer.jsx'
 import UpdateProfilePage from './pages/UpdateProfilePage.jsx'
 
-/* TO DO:
-          Usar la propiedad onBlur de los inputs para que cuando se haga click afuera del menu desplegable este
-          se cierre. Buscar algo que funcione como la propiedad onBlur.
-          Ver que cuando se actualiza una tarea es necesario refrescar la pagina...
-*/
-
-function App () {
+function App() {
   document.querySelector('body').classList.add('bg-backgroundColor', 'text-textColor')
 
   return (
