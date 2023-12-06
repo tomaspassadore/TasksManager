@@ -5,7 +5,7 @@ import InputComponent from '../components/FormLibrary/InputComponent'
 import { Button } from '../components/FormLibrary/formElements'
 import TextareaComponent from '../components/FormLibrary/TextareaComponent'
 
-function AddTaskPage () {
+function AddTaskPage() {
   const { createTask, getTask, updateTask } = useTasks()
   const [title, setTitle] = useState({ value: '', valid: null })
   const [description, setDescription] = useState({ value: '', valid: null })
@@ -14,7 +14,7 @@ function AddTaskPage () {
   const params = useParams()
 
   useEffect(() => {
-    async function loadTask () {
+    async function loadTask() {
       if (params.id) {
         const task = await getTask(params.id)
         setTitle({ value: task.title, valid: 'true' })
@@ -37,8 +37,8 @@ function AddTaskPage () {
     }
   }
   return (
-    <div className='flex justify-center items-center mx-auto mt-[5.9em]'>
-      <div className='bg-formColor shadow-md border-[1px] border-neutral-200 dark:border-none w-full max-w-md py-8 px-6 min-[430px]:p-12 rounded-2xl my-[10em]'>
+    <div className='flex justify-center items-center mx-auto h-screen mt-[-2.5rem]'>
+      <div className='bg-formColor shadow-md border-[1px] border-neutral-200 dark:border-none w-full max-w-md py-8 px-6 min-[430px]:p-12 rounded-2xl mt-[6rem]'>
         <h1 className='text-2xl font-semibold mb-3'>New Task</h1>
         <div>
           <InputComponent

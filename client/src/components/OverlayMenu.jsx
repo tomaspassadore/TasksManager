@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import DarkModeButton from './DarkModeButton'
 
-function OverlayMenu ({ menu, setMenu, viewName }) {
+function OverlayMenu({ menu, setMenu, viewName }) {
   const { logout } = useAuth()
 
   return (
-    <div className='h-full w-screen fixed bg-black/[0.9] z-20 left-0 mt-[-35px] border-t-[2px] border-t-neutral-300 dark:border-t-zinc-600 min-[800px]:hidden'>
-      <div className='bg-primaryColor w-screen h-fit flex flex-col top-0 font-[Roboto]'>
+    <div className='h-full w-screen fixed bg-black/[0.9] z-20 top-24 left-0 mt-[-35px] border-t-[2px] border-t-neutral-300 dark:border-t-zinc-600 min-[800px]:hidden'>
+      <div className='bg-primaryColor w-screen absolute h-fit flex flex-col top-0 font-[Roboto]'>
         <div className='flex py-1 justify-between'>
           <div className='flex items-center mr-10 pl-6 sm:pl-8'>
             Welcome
