@@ -5,7 +5,7 @@ import InputComponent from '../components/FormLibrary/InputComponent'
 import { regularExpressions } from '../components/FormLibrary/regularExpressions'
 import { Button } from '../components/FormLibrary/formElements'
 
-function LoginPage () {
+function LoginPage() {
   const { signIn, errors, isAuthenticated } = useAuth()
   const [email, setEmail] = useState({ value: '', valid: null })
   const [password, setPassword] = useState({ value: '', valid: null })
@@ -23,8 +23,8 @@ function LoginPage () {
   }, [isAuthenticated])
 
   return (
-    <div className='flex justify-center items-center h-[88vh] mt-10 min-[400px]:mt-0'>
-      <div className='bg-formColor border-borderColor border-[1px] w-full max-w-md py-8 px-6 min-[435px]:p-12 rounded-3xl mx-auto'>
+    <div className='flex justify-center items-center h-[88vh] mt-10'>
+      <div className='bg-formColor border-borderColor border-[1px] w-full max-w-sm py-8 px-6 min-[435px]:p-12 rounded-3xl mx-auto'>
         <h1 className='text-2xl min-[435px]:text-[28px] pb-3 font-bold mb-3'>Login</h1>
 
         {errors.map((error, i) => (

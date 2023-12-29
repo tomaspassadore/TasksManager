@@ -4,25 +4,9 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import { useAuth } from '../../context/AuthContext'
 
-import {
-  Label,
-  Container,
-  InputError,
-  ValidationIcon,
-  Textarea
-} from './formElements'
+import { Label, Container, InputError, ValidationIcon, Textarea } from './formElements'
 
-const TextareaComponent = ({
-  state,
-  changeState,
-  label,
-  placeholder,
-  id,
-  messageError,
-  regularExpressions,
-  hideIcon,
-  required
-}) => {
+const TextareaComponent = ({ state, changeState, label, placeholder, id, messageError, regularExpressions, hideIcon, required }) => {
   const { theme } = useAuth()
 
   const onChange = (e) => {
@@ -57,6 +41,7 @@ const TextareaComponent = ({
           onKeyUp={validation}
           onBlur={validation}
           $valid={state.valid}
+          $hideIcon={hideIcon}
         />
         <ValidationIcon
           icon={state.valid === 'true' ? faCircleCheck : faCircleXmark}

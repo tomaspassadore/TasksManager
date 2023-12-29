@@ -7,7 +7,7 @@ import OverlayMenu from './OverlayMenu'
 import './styles/navbar.css'
 import DarkModeButton from './DarkModeButton'
 
-function Navbar () {
+function Navbar() {
   const { isAuthenticated, user, logout } = useAuth()
   const [menu, setMenu] = useState(false)
   const location = useLocation().pathname
@@ -93,19 +93,19 @@ function Navbar () {
               ? (
                 <Link
                   to='/register'
-                  className='hover:bg-buttonPrimaryHover text-white duration-150 px-5 mr-4 py-2 bg-buttonPrimary sm:text-md sm:px-6 rounded-xl'
+                  className='hover:bg-buttonPrimaryHover hidden min-[380px]:block text-white duration-150 px-5 mr-4 py-2 bg-buttonPrimary sm:text-md sm:px-6 rounded-xl'
                 >
                   Register
                 </Link>
-                )
+              )
               : (
                 <Link
                   to='/login'
-                  className='hover:bg-buttonPrimaryHover text-white duration-150 px-5 mr-4 py-2 bg-buttonPrimary sm:text-md sm:px-6 sm:py-2 rounded-xl'
+                  className='hover:bg-buttonPrimaryHover hidden min-[380px]:block text-white duration-150 px-5 mr-4 py-2 bg-buttonPrimary sm:text-md sm:px-6 sm:py-2 rounded-xl'
                 >
                   Login
                 </Link>
-                )}
+              )}
           </div>
         </div>
       </nav>

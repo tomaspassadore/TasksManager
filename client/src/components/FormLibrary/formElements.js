@@ -62,8 +62,10 @@ export const Textarea = styled.textarea`
   background: ${props => props.$inputColor === 'dark' ? colors.darkInputColor : colors.inputColor};
   border-radius: 0.375rem;
   transition: 0.3s ease all;
-  line-height: 40px;
-  padding: 0px 40px 0px 10px;
+  line-height: 20px;
+  resize: none;
+  height: 80px;
+  padding: ${props => props.$hideIcon ? '3px 10px' : '3px 40px 3px 10px'};
   border: 3px solid transparent;
   // border: 3px solid ${props => props.$inputColor === 'dark' ? 'transparent' : '#d4d4d4'};
 
@@ -174,5 +176,19 @@ export const ErrorMessage = styled.div`
   }
   b {
     margin-left: 10px;
+  }
+`
+export const Date = styled.input`
+  width: 100%;
+  background: ${props => props.$inputColor === 'dark' ? colors.darkInputColor : colors.inputColor};
+  border-radius: 0.375rem;
+  // height: 45px;
+  padding: 5px 10px;
+  transition: 0.3s ease all;
+  border: 3px solid transparent  ;
+
+  &:focus {
+    border: 3px solid ${colors.border};
+    outline: none;
   }
 `

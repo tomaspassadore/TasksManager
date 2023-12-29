@@ -5,7 +5,7 @@ import InputComponent from '../components/FormLibrary/InputComponent'
 import { Button } from '../components/FormLibrary/formElements'
 import { regularExpressions } from '../components/FormLibrary/regularExpressions'
 
-function RegisterPage () {
+function RegisterPage() {
   const { signUp, isAuthenticated, errors } = useAuth()
   const navigate = useNavigate()
   const [name, setName] = useState({ value: '', valid: null })
@@ -33,7 +33,7 @@ function RegisterPage () {
 
   return (
     <div className='flex justify-center items-center h-[88vh] mt-10'>
-      <div className='bg-formColor border-borderColor border-[1px] w-full max-w-md py-8 px-6 min-[435px]:p-12 rounded-3xl mx-auto'>
+      <div className='bg-formColor border-borderColor border-[1px] w-full max-w-sm mt-20 min-[435px]:mt-0 py-8 px-6 min-[435px]:p-12 rounded-3xl mx-auto'>
         <h1 className='text-2xl min-[435px]:text-[28px] pb-3 font-bold mb-3'>Register</h1>
         {/* En caso de haber errores, se mostraran con un cartel rojo aqui */}
         {errors.map((error, i) => (

@@ -2,6 +2,10 @@ import User from '../models/user.model.js'
 import bcrypt from 'bcrypt'
 import { createAccessToken } from '../libs/jwt.js'
 import jwt from 'jsonwebtoken'
+import { Resend } from 'resend'
+import 'dotenv/config'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const register = async (req, res) => {
   const { name, email, password } = req.body
@@ -17,6 +21,21 @@ export const register = async (req, res) => {
     })
     const userSaved = await newUser.save()
     const token = await createAccessToken({ id: userSaved._id })
+
+    // Aqui se envia un mail de registro mediante la API de resend
+    const { error } = await resend.emails.send({
+      from: 'Tasks Manager <tasksmanager@resend.dev>',
+      to: email,
+      subject: `Welcome ${name}`,
+      html: `
+        <td align="left" class="esd-block-html">
+          <h2>¡Welcome to your tasks manager!</h2>
+          <p>Your account has been created successfully</p>
+          <p style="text-align:end"><i>Tasks Manager</i></p>
+        </td>
+      `,
+    })
+    if (error) throw { message: error }
 
     res.cookie('token', token, {
       maxAge: 86400000,

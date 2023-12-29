@@ -19,7 +19,7 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Navbar />
-          <main className='container px-5 min-[430px]:px-10 pb-9 mx-auto'>
+          <main className={`container px-5 min-[400px]:px-10 mx-auto`}>
             <Routes>
               <Route path='/login' element={<LoginPage />} />
               <Route path='/register' element={<RegisterPage />} />

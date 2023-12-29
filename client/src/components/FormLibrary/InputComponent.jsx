@@ -4,27 +4,9 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 import { useAuth } from '../../context/AuthContext'
 
-import {
-  Input,
-  Label,
-  Container,
-  InputError,
-  ValidationIcon
-} from './formElements'
+import { Input, Label, Container, InputError, ValidationIcon } from './formElements'
 
-const InputComponent = ({
-  state,
-  changeState,
-  type,
-  label,
-  placeholder,
-  id,
-  messageError,
-  regularExpressions,
-  toDo,
-  hideIcon,
-  required
-}) => {
+const InputComponent = ({ state, changeState, type, label, placeholder, id, messageError, regularExpressions, toDo, hideIcon, required }) => {
   const { theme } = useAuth()
 
   const onChange = (e) => {

@@ -18,11 +18,13 @@ export const getTask = async (req, res) => {
 }
 export const createTask = async (req, res) => {
   try {
-    const { title, description, date } = req.body
+    const { title, description, dateTask, timeTask } = req.body
     const now = new Date()
     const newTask = new Task({
       title,
       description,
+      dateTask,
+      timeTask,
       date: now,
       offset: now.getTimezoneOffset(),
       user: req.user.id
