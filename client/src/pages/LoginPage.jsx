@@ -20,8 +20,8 @@ function LoginPage() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    test()
     if (isAuthenticated) navigate('/tasks')
-    else test()
   }, [isAuthenticated])
 
   return (
