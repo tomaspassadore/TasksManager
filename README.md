@@ -31,5 +31,4 @@ VITE_BACKEND_URL = 'http://localhost:<PORT>'
 ### 4. Run the API
 Open a new terminal and inside of `api` folder run `npm run dev`
 ### 5. Run the client
-Open another terminal and inside of `client` folder run `npm run dev`
-Later open http://localhost:5173 in your browser to view the app running
+Open another terminal and inside of `client` folder run `npm run dev`. Later open http://localhost:5173 in your browser to view the app running
