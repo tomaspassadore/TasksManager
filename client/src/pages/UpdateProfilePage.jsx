@@ -7,16 +7,13 @@ import Modal from '../components/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons'
 
-function UpdateProfilePage () {
+function UpdateProfilePage() {
   const { user, logout, deleteProfile, updateProfile } = useAuth()
   const [modal, setModal] = useState({ valid: 'false', value: '' })
   const [name, setName] = useState({ value: user.name, valid: null })
   const [email, setEmail] = useState({ value: user.email, valid: null })
   const [newPassword, setNewPassword] = useState({ value: '', valid: null })
-  const [currentPassword, setCurrentPassword] = useState({
-    value: '',
-    valid: null
-  })
+  const [currentPassword, setCurrentPassword] = useState({ value: '', valid: null })
 
   const changeName = async () => {
     if (name.valid === 'true') {
@@ -52,17 +49,17 @@ function UpdateProfilePage () {
   }
 
   return (
-    <div className=' flex flex-col justify-center items-center gap-y-5 w-full h-full mt-[5.9rem] mx-auto'>
+    <div className=' flex flex-col pb-10 justify-center items-center gap-y-5 w-full h-full mt-[5.9rem] mx-auto'>
       <div className='flex flex-col items-center w-full bg-formColor border-[1px] border-neutral-200 dark:border-none py-12 sm:p-12 rounded-3xl'>
         {
           modal.valid === 'true' &&
-            <Modal
-              setState={setModal}
-              modalText={modal.value}
-              buttonText='OK'
-              oneButton
-              toDo1={() => window.location.reload()}
-            />
+          <Modal
+            setState={setModal}
+            modalText={modal.value}
+            buttonText='OK'
+            oneButton
+            toDo1={() => window.location.reload()}
+          />
         }
         <h1 className='font-bold text-2xl pb-5'>Your Profile</h1>
         <div className='py-6 sm:my-5 px-10 flex flex-col rounded-3xl sm:shadow-sm sm:border-[1px] border-borderColor items-center'>
@@ -79,7 +76,6 @@ function UpdateProfilePage () {
           />
           <Button onClick={changeName}>Change name</Button>
         </div>
-
         <div className='py-6 sm:my-5 px-10 flex flex-col rounded-3xl sm:shadow-sm sm:border-[1px] border-borderColor items-center'>
           <InputComponent
             state={email}

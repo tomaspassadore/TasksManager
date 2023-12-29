@@ -26,6 +26,49 @@ input:-webkit-autofill:focus {
   filter: invert(1);
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4F46E5 #27272A;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 15px;
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #27272A;
+  padding: 15px 0px;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #27272A;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #27272A;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #4F46E5;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #4F46E5;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #433BC2;
+}
+
+
 @layer components {
   .bg-backgroundColor {
     @apply dark:bg-darkBackgroundColor;
