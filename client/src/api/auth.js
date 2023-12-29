@@ -1,5 +1,7 @@
 import axios from './axios.js'
 
+export const test = () => axios.get('/test')
+
 export const registerRequest = (user) => axios.post('/register', user)
 
 export const loginRequest = (user) => axios.post('/login', user)

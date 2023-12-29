@@ -4,6 +4,10 @@ import { createAccessToken } from '../libs/jwt.js'
 import jwt from 'jsonwebtoken'
 import 'dotenv/config'
 
+export const testServer = async (req, res) => {
+  res.status(200).json('Server running')
+}
+
 export const register = async (req, res) => {
   const { name, email, password } = req.body
   try {

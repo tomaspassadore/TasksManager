@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import InputComponent from '../components/FormLibrary/InputComponent'
 import { regularExpressions } from '../components/FormLibrary/regularExpressions'
 import { Button } from '../components/FormLibrary/formElements'
+import { test } from '../api/auth'
 
 function LoginPage() {
   const { signIn, errors, isAuthenticated } = useAuth()
@@ -20,6 +21,7 @@ function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) navigate('/tasks')
+    else test()
   }, [isAuthenticated])
 
   return (

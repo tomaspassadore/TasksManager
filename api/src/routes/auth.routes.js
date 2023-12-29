@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import {
+  testServer,
   register,
   login,
   logout,
@@ -15,6 +16,7 @@ import { registerSchema, loginSchema, updateNameSchema, updateEmailSchema, updat
 const router = Router()
 
 // Routes
+router.get('/test', testServer)
 router.post('/register', validateSchema(registerSchema), register)
 router.post('/login', validateSchema(loginSchema), login)
 router.post('/logout', logout)

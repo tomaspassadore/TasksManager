@@ -15,13 +15,12 @@ npm install
 ### 2. Add the first file .env
 In the `api` folder create a file called .env with the following variables. Replace each value of the variables.
 
-**NOTE**: You will need an account in [Atlas MongoDB](https://www.mongodb.com/es/atlas/database) service, and connect a new project or any existing through the string connection. Also you will need an account in the API [Resend](https://resend.com/docs/send-with-nodejs) to get the API key. 
+**NOTE**: You will need an account in [Atlas MongoDB](https://www.mongodb.com/es/atlas/database) service, and connect a new project or any existing through the string connection.
 ```
 PORT = <PORT>
 DB_URL = <Your_MongoDB_Atlas_String_Connection>
 TOKEN_SECRET = <TOKEN_SECRET>
 FRONTEND_URL = 'http://localhost:5173'
-RESEND_API_KEY = <Your_API_Key>
 ```
 *Note*: By default vite uses port 5173.
 ### 3. Add the other file .env
