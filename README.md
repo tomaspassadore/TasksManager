@@ -14,6 +14,7 @@ npm install
 ```
 ### 2. Add the first file .env
 In the `api` folder create a file called .env with the following variables. Replace each value of the variables.
+
 **NOTE**: You will need an account in [Atlas MongoDB](https://www.mongodb.com/es/atlas/database) service, and connect a new project or any existing through the string connection. Also you will need an account in the API [Resend](https://resend.com/docs/send-with-nodejs) to get the API key. 
 ```
 PORT = <PORT>
