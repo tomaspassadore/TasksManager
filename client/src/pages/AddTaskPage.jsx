@@ -31,7 +31,7 @@ function AddTaskPage() {
   }, [])
 
   const onSubmit = async () => {
-    if (title.valid !== 'true' || description.valid !== 'true' || date.valid !== 'true') return
+    if (title.valid !== 'true' || date.valid !== 'true') return
     const data = { title: title.value, description: description.value, dateTask: date.value, timeTask: time.value }
 
     if (params.id) {
@@ -65,7 +65,6 @@ function AddTaskPage() {
             placeholder='Description'
             id='textareaDescription'
             rows='12'
-            required
             hideIcon
           />
           <div className='flex flex-col min-[450px]:flex-row w-full justify-between'>

@@ -11,9 +11,7 @@ function TasksPage() {
   useEffect(() => {
     getAllTasks()
   }, [])
-  console.log(tasks)
   if (tasks.length === 0) {
-    console.log('MARTIN')
     return (
       <div className='flex flex-col h-screen justify-center items-center'>
         <h2>You have not created any tasks yet</h2>
